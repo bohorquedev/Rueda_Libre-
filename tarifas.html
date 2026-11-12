@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rueda Libre - Tarifas y Rutas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-marca">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-bicycle"></i> Rueda Libre
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="tarifas.html">Tarifas y Rutas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Reservas</a>
+            </li>
+          </ul>
+          <a href="reservas.html" class="btn btn-acento ms-lg-3">Reservar ahora</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <h1 class="mb-4">Tarifas de Alquiler y Recorridos</h1>
+      <p class="mb-4">Todos nuestros planes incluyen casco, candado y seguro básico contra accidentes.</p>
+
+      <section class="mb-5">
+        <h2 class="h4 mb-3">Alquiler libre de bicicletas</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <caption class="visually-hidden">Precios de alquiler según tipo de bicicleta y tiempo</caption>
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Tipo de Bicicleta</th>
+                <th scope="col">Por Hora</th>
+                <th scope="col">Medio Día (4 horas)</th>
+                <th scope="col">Día Completo (8 horas)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Urbana Clásica</th>
+                <td>$12.000 COP</td>
+                <td>$35.000 COP</td>
+                <td>$55.000 COP</td>
+              </tr>
+              <tr>
+                <th scope="row">Todo Terreno MTB</th>
+                <td>$18.000 COP</td>
+                <td>$50.000 COP</td>
+                <td>$80.000 COP</td>
+              </tr>
+              <tr>
+                <th scope="row">Eléctrica Asistida</th>
+                <td>$28.000 COP</td>
+                <td>$85.000 COP</td>
+                <td>$130.000 COP</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4 mb-3">Recorridos guiados por Medellín</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <caption class="visually-hidden">Rutas guiadas disponibles, duración, dificultad y precio</caption>
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Nombre del Tour</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Dificultad</th>
+                <th scope="col">Precio por Persona</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Ruta Parques del Río y Centro</th>
+                <td>3 horas</td>
+                <td>Baja</td>
+                <td>$65.000 COP</td>
+              </tr>
+              <tr>
+                <th scope="row">Tour Poblado, Ciudad del Río y Laureles</th>
+                <td>4 horas</td>
+                <td>Media</td>
+                <td>$85.000 COP</td>
+              </tr>
+              <tr>
+                <th scope="row">Subida Mirador Las Palmas</th>
+                <td>3.5 horas</td>
+                <td>Alta</td>
+                <td>$110.000 COP</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="text-center mt-4">
+        <a href="reservas.html" class="btn btn-acento btn-lg">Reservar mi bicicleta o tour</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-marca text-white py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">Rueda Libre Medellín - Calle 10 # 43E-25, El Poblado</p>
+      <p class="mb-0">Tel: 300 555 0199 | contacto@ruedalibre.co</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

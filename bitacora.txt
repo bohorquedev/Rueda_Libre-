@@ -1,0 +1,15 @@
+BITACORA DE DESARROLLO - RUEDA LIBRE
+
+Semana 1 (v0.1 a v1.0)
+- Cree la estructura de carpetas con index.html, tarifas.html, reservas.html y la carpeta css.
+- En v0.2 cambie los div generales por etiquetas semanticas (header, nav, main, section, article, footer) y agregue atributos scope y caption en las tablas para lectores de pantalla.
+- Revise el contraste de colores: use verde oscuro (#1b4332) con texto blanco y naranja (#f77f00) con texto negro para que se lea bien y cumpla accesibilidad.
+- En v1.0 conecte una sola hoja de estilos externa (styles.css) con Google Fonts (Montserrat y Open Sans) y estados visibles de :hover y :focus.
+
+Semana 2 (v1.5 a v2.0)
+- En v1.5 probe hacer el diseño responsive con CSS puro. Use Flexbox para alinear el menu y el footer en una fila, y CSS Grid para la seccion de la flota de bicicletas porque necesitaba columnas iguales que se acomodaran solas. Tuve que hacer varios ajustes para que no saliera scroll horizontal a 360px.
+- Comparativa CSS propio vs Bootstrap 5:
+  * CSS propio (v1.5): me tomo cerca de 3 horas cuadrar las media queries y escribi unas 140 lineas de CSS.
+  * Bootstrap 5 (v2.0): migrar todo me tomo 1 hora y el archivo styles.css quedo de solo 48 lineas porque use las clases de grilla (row, col) y utilidades de espaciado.
+- En v2.0 agregue la navbar que colapsa en celular, el carrusel de promociones, las cards para la flota y la validacion de Bootstrap en el formulario con una alerta de error y un modal de confirmacion.
+- Probe toda la pagina en DevTools a 360px, 768px y 1280px y navegue usando solo la tecla Tab para verificar que todo funciona bien.

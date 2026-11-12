@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rueda Libre - Reservas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-marca">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-bicycle"></i> Rueda Libre
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tarifas.html">Tarifas y Rutas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="reservas.html">Reservas</a>
+            </li>
+          </ul>
+          <a href="reservas.html" class="btn btn-acento ms-lg-3">Reservar ahora</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <h1 class="mb-3">Formulario de Reserva</h1>
+          <p class="mb-4">Diligencia tus datos para separar tu bicicleta o cupo en nuestros recorridos guiados.</p>
+
+          <div id="alertaError" class="alert alert-danger d-none" role="alert">
+            Por favor revisa los campos marcados en rojo antes de enviar tu reserva.
+          </div>
+
+          <form id="formReserva" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" required minlength="3">
+              <div class="invalid-feedback">Ingresa tu nombre completo (mínimo 3 letras).</div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" required>
+                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="telefono" class="form-label">Teléfono celular</label>
+                <input type="tel" class="form-control" id="telefono" pattern="[0-9]{10}" required>
+                <div class="invalid-feedback">Ingresa un número celular de 10 dígitos.</div>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="servicio" class="form-label">Servicio a reservar</label>
+                <select class="form-select" id="servicio" required>
+                  <option value="" selected disabled>Selecciona una opción...</option>
+                  <option value="urbana">Alquiler Urbana Clásica</option>
+                  <option value="mtb">Alquiler Todo Terreno MTB</option>
+                  <option value="electrica">Alquiler Eléctrica Asistida</option>
+                  <option value="tour-rio">Tour Parques del Río y Centro</option>
+                  <option value="tour-poblado">Tour Poblado y Laureles</option>
+                  <option value="tour-palmas">Subida Mirador Las Palmas</option>
+                </select>
+                <div class="invalid-feedback">Selecciona el servicio que deseas.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="cantidad" class="form-label">Cantidad de bicicletas</label>
+                <input type="number" class="form-control" id="cantidad" min="1" max="10" value="1" required>
+                <div class="invalid-feedback">Indica entre 1 y 10 bicicletas.</div>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="fecha" class="form-label">Fecha de reserva</label>
+                <input type="date" class="form-control" id="fecha" required>
+                <div class="invalid-feedback">Selecciona una fecha válida.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="hora" class="form-label">Hora de inicio</label>
+                <input type="time" class="form-control" id="hora" required>
+                <div class="invalid-feedback">Selecciona la hora de recogida.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="notas" class="form-label">Comentarios adicionales (opcional)</label>
+              <textarea class="form-control" id="notas" rows="3" placeholder="Ej: Necesito talla S o silla para niño"></textarea>
+            </div>
+
+            <div class="mb-4 form-check">
+              <input type="checkbox" class="form-check-input" id="terminos" required>
+              <label class="form-check-label" for="terminos">Acepto las políticas de uso y seguridad de Rueda Libre.</label>
+              <div class="invalid-feedback">Debes aceptar las políticas para continuar.</div>
+            </div>
+
+            <button type="submit" class="btn btn-acento btn-lg">Confirmar Reserva</button>
+          </form>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="p-4 bg-light rounded border">
+            <h2 class="h4 mb-3">Información de Contacto</h2>
+            <p><i class="bi bi-geo-alt-fill me-2"></i><strong>Dirección:</strong> Calle 10 # 43E-25, El Poblado, Medellín</p>
+            <p><i class="bi bi-clock-fill me-2"></i><strong>Horario:</strong> Lunes a domingo de 7:00 a.m. a 7:00 p.m.</p>
+            <p><i class="bi bi-whatsapp me-2"></i><strong>WhatsApp:</strong> +57 300 555 0199</p>
+            <p><i class="bi bi-envelope-fill me-2"></i><strong>Correo:</strong> contacto@ruedalibre.co</p>
+            <hr>
+            <p class="mb-0 small">Recuerda llegar 15 minutos antes de tu hora reservada para ajustar la altura del sillín y entregarte el casco.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-marca text-white">
+          <h2 class="modal-title h5" id="modalTitulo">¡Reserva Recibida!</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Hemos registrado tu solicitud correctamente. Te enviaremos un mensaje de confirmación a tu correo electrónico en unos minutos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-acento" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-marca text-white py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">Rueda Libre Medellín - Calle 10 # 43E-25, El Poblado</p>
+      <p class="mb-0">Tel: 300 555 0199 | contacto@ruedalibre.co</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const formulario = document.getElementById('formReserva');
+    const alertaError = document.getElementById('alertaError');
+    const modalExito = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+
+    formulario.addEventListener('submit', function (evento) {
+      evento.preventDefault();
+      if (!formulario.checkValidity()) {
+        alertaError.classList.remove('d-none');
+      } else {
+        alertaError.classList.add('d-none');
+        modalExito.show();
+        formulario.reset();
+        formulario.classList.remove('was-validated');
+        return;
+      }
+      formulario.classList.add('was-validated');
+    });
+  </script>
+</body>
+</html>

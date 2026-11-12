@@ -1,0 +1,9 @@
+BITACORA DE DESARROLLO - RUEDA NOCTURNA (TAILWIND CLI)
+
+- Configure Tailwind usando la CLI con Node.js y cree la estructura con src/input.css y dist/output.css para compilar las clases localmente.
+- Cree la landing page de Rueda Nocturna enfocada en los recorridos de jueves a sábado a las 7:30 p. m.
+- Añadi la sección de las 3 rutas en Grid, el kit de componentes (alerta, input, botón) y un formulario sencillo.
+- Integre el botón de modo oscuro con clases 'dark:' y conecte los enlaces para volver al sitio principal de Rueda Libre.
+- Comparativa de Frameworks (Bootstrap vs Tailwind CLI):
+  * Bootstrap: Es mas facil de arrancar porque ya trae componentes listos, pero personalizar los colores de la marca me tocó hacerlo con estilos extra.
+  * Tailwind CLI: Me parecio un poco mas enredado al principio por tener que instalar Node y dejar corriendo el comando de compilación, pero el resultado queda limpio y con control total de cada diseño sin cargar codigo innecesario.

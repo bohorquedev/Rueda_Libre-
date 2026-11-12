@@ -1,0 +1,52 @@
+:root {
+  --color-primario: #1b4332;
+  --color-secundario: #2d6a4f;
+  --color-acento: #f77f00;
+  --color-acento-hover: #d66d00;
+  --color-texto: #212529;
+  --color-fondo: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-marca {
+  background-color: var(--color-primario);
+}
+
+.btn-acento {
+  background-color: var(--color-acento);
+  color: #000000;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-acento:hover,
+.btn-acento:focus {
+  background-color: var(--color-acento-hover);
+  color: #000000;
+}
+
+.nav-link:focus,
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
